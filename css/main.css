@@ -85,8 +85,8 @@ h1{
     font-family: 'Lilita One', cursive;  
 }
 
-/* ********************** Content ********************************* */
-.content{
+/* ********************** gallery ********************************* */
+.gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -94,14 +94,15 @@ h1{
 }
 .item{
     width: calc(33% - 3px);
-    /* outline: 1px solid green; */
+    outline: 1px solid green;
     text-align: center;
+   
     margin: 4px 0;
 }
-.image{
+.img{
     width: 100%;
     height: 500px;
-    background-image: url(../img/2.png);
+    /* background-image: url(../img/2.png); */
     background-color: #ebebeb;
     background-size: contain;
     background-repeat: no-repeat;
@@ -109,4 +110,7 @@ h1{
 }
 .item:hover {
 	transform: scale(1.01);
+}
+.btn{
+    margin: 5px;
 }
