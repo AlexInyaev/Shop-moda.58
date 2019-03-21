@@ -16,20 +16,20 @@ class Producrs{
     constructor(gallery,productsCatolog) {                              //2 получил класс galery and arr productsCatolog
         this.container = document.querySelector(gallery);            //3 получил класс gallery и записал его в переменную container
         this.productsCatolog = productsCatolog;                     //4 записал массив productsCatolog в пеоеменную productsCatolog
-        this.create();                                              // 5 создал метод create
+        this.create();                                             // 5 создал метод create
     }
     create(){
         var wrapper =  document.createElement('slot');                  // slot?
 
         for (var i = 0; i<this.productsCatolog.length; i++){        // 6 в цикле перебераю массив productsCatolog
-           
+           console.log(this.productsCatolog[i].id)
 
             var item = this.getElement({ tagName: 'div', className: 'item',innerText:''});   //пременил innerText:''-чтобы убрать undefined
             var name = this.getElement({ tagName: 'div', className: 'name',innerText: this.productsCatolog[i].name});   //вызвал метод и передал  объект 
-            var img = this.getElement({ tagName: 'div', className: 'img',backgroundImage:`url(${this.productsCatolog[i].img})`,innerText:''});   //вызвал метод и передал  объект 
-            var size = this.getElement({ tagName: 'div', className: 'size',innerText: this.productsCatolog[i].size});
+            var img = this.getElement({ tagName: 'div', id:this.productsCatolog[i].id,  className: 'img',backgroundImage:`url(${this.productsCatolog[i].img})`,innerText:''});   //вызвал метод и передал  объект 
+            var size = this.getElement({ tagName: 'div', className: 'size',innerText:'Размер: '+ this.productsCatolog[i].size});
             var btn = this.getElement({ tagName: 'button', className: 'btn',innerText:'Добавить в корзину'});
-            var model = this.getElement({ tagName: 'div', className: 'model',innerText:'Модель-'+this.productsCatolog[i].id});
+            var model = this.getElement({ tagName: 'div', className: 'model',innerText:'Модель: '+this.productsCatolog[i].id});
 
             item.appendChild(img);
             item.appendChild(name);
@@ -48,6 +48,9 @@ class Producrs{
 
         if('className' in options){
             element.setAttribute('class',options.className);                  //8 добавил к элементу  (class="item"                     
+        }
+        if('id' in options){
+            element.setAttribute('id',options.id);                  //8 добавил к элементу  (class="item"                     
         }
         if('innerText' in options){
             element.innerText = options.innerText;                                    
