@@ -2,7 +2,7 @@ var itemFull = document.querySelector('.gallery-full');
 
 
 function testclick (id){
-	console.log (id.style.backgroundImage);
+	
 	
 	
 itemFull.style.display="block";

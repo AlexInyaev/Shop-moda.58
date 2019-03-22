@@ -150,8 +150,7 @@ h1{
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
-    /* background-image: url(https://image.ibb.co/eoUyfT/close.png); */
-    background-color: #f6f;
+    background-image: url(../img/close.png);
 	cursor: pointer;
 	position: absolute;
 	top: 20px;
