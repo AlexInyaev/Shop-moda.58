@@ -1,16 +1,4 @@
 
-// var content=document.querySelector('.content');
-
-//     var i;
-//     var html='';
-// for (i=0; i<productCatolog.length; i++) {
-//     html+=`<div class="item" id="${i}">
-//                 <div class="image" style=" background-image: url(${productCatolog.img[i]});"></div>
-//                 <h3>${discription[i]}</h3>
-//                 <p class="price">${price[i]}</p>
-//             </div>`          
-// }
-// content.innerHTML=html;
      
 class Producrs{
     constructor(gallery,productsCatolog) {                              //2 получил класс galery and arr productsCatolog
@@ -28,8 +16,15 @@ class Producrs{
             var name = this.getElement({ tagName: 'div', className: 'name',innerText: this.productsCatolog[i].name});   //вызвал метод и передал  объект 
             var img = this.getElement({ tagName: 'div', id:this.productsCatolog[i].id,click:`testclick(${this.productsCatolog[i].id})`,  className: 'img',backgroundImage:`url(${this.productsCatolog[i].img})`,innerText:''});   //вызвал метод и передал  объект 
             var size = this.getElement({ tagName: 'div', className: 'size',innerText:'Размер: '+ this.productsCatolog[i].size});
-            var btn = this.getElement({ tagName: 'button', className: 'btn',innerText:'Добавить в корзину'});
+            var btn = this.getElement({ tagName: 'button', className: 'btn', dataId:this.productsCatolog[i].id, innerText:'Добавить в корзину'});
             var model = this.getElement({ tagName: 'div', className: 'model',innerText:'Модель: '+this.productsCatolog[i].id});
+            
+            btn.addEventListener('click', function(){   //выбор товара
+             var id = this.getAttribute('data-id');
+            var result = basketStore.putProduct(id);
+            alert(result,pushProduct);
+            alert(result,products);
+            });
 
             item.appendChild(img);
             item.appendChild(name);
@@ -50,10 +45,13 @@ class Producrs{
             element.setAttribute('class',options.className);                  //8 добавил к элементу  (class="item"                     
         }
         if('click' in options){
-            element.setAttribute('onclick',options.click);                  //8 добавил к элементу  (class="item"                     
+            element.setAttribute('onclick',options.click);                                       
         }
         if('id' in options){
-            element.setAttribute('id',options.id);                  //8 добавил к элементу  (class="item"                     
+            element.setAttribute('id',options.id);                                       
+        }
+        if('dataId' in options){
+            element.setAttribute('data-id',options.dataId);                                    
         }
         if('innerText' in options){
             element.innerText = options.innerText;                                    
@@ -71,6 +69,7 @@ class Producrs{
 }
  var producrs = new Producrs('.gallery',productsCatolog);               //1 получил экземпляр класса 'Producrs' передал в класс класс'.gallery' и массив productsCatolog 
 
+ //*************************************** basket */
  
 
  
