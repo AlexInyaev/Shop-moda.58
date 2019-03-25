@@ -11,20 +11,21 @@ class BasketStore {
         putProduct(id){
            var products = this.getProducts();
           var index = products.indexOf(id);
-          if (index === -1){
+          if (index === -1) {
             products.push(id);
-            var pushProduct=true;
+           var pushProduct = true;
           } else {
             products.splice(index, 1);
-            var pushProduct=false;
+            var pushProduct = false; 
+           
           }
-            localStorage.setItem('products',JSON.stringify(products));
+         
+            localStorage.setItem('products', JSON.stringify(products));
             return {
-                pushProduct:pushProduct,
-                products: products,
-            }
+                pushProduct: pushProduct,
+                products: products
+            };
         }
     }
 var basketStore = new BasketStore();
-
 
