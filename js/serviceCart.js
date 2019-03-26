@@ -10,9 +10,9 @@ create() {
     console.log(this.getbasketCart());
     
     }
-    getProductCart() {
+    getBasketCart() {
         var products = basketStore.getProducts();
-        var productCart = [];
+        var basketCart = [];
         for (var i=0; i<this.productsCatolog.length; i++){
             if (producrs.indexOf(this.productsCatolog[i].id)!== -1){
                 basketCart.push(this.productsCatolog[i]);
