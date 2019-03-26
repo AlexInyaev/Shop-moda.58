@@ -7,22 +7,21 @@
          this.create();
      }
      create(){
-        //    console.log(this.getProductsCart());
-        //    console.log('work');
+            // console.log(this.getProductsCart());
+           console.log(this.getProductsCart());
          
 
         
      }
-     getProductsCart(){
-         var products = basketStore.getProducts();
-         var productCart = [];
-         for (i=0; i<this.productsCatalog.length; i++){
-             if (products.indexOf(this.productsCatalog[i].id) !== -1){
-                 productCart.push(this.productsCatalog[i])
-                 console.log('work');
+     getProductsCart() {
+         var products = basketStore.getProducts();  // получил товар в корзине
+         var productsCart = [];
+         for (var i = 0; i < this.productsCatalog.length; i++) {
+             if (products.indexOf(this.productsCatalog[i].id) !== -1) {
+                 productsCart.push(this.productsCatalog[i]);
              }
         }
-         return productCart;
+         return productsCart;
         
      }
  }
