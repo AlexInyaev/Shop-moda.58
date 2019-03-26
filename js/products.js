@@ -51,7 +51,6 @@ class Producrs{
             item.appendChild(model);
             item.appendChild(size);
             item.appendChild(btn);
-
             wrapper.appendChild(item);                             //9 чтобы меньше обращаться к дом дереву записавыем эл. в переменную wrapper
 
         }
