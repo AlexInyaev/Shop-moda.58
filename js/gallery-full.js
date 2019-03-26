@@ -1,4 +1,4 @@
-var itemFull = document.querySelector('.gallery-full');
+var itemFull = document.querySelector('.galleryFull');
 
 
 function testclick (id){
