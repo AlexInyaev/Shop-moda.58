@@ -44,6 +44,31 @@ body{
     transform: scale(1.1);
     transition: 0.2s;
 }
+/* *************************  container cart  ******************************** */
+.containerCart {
+	display: none;
+	align-items: flex-start;
+	position: fixed;
+	width: 97%;
+	height: 97vh;
+	background: #fff;
+	box-shadow: 
+		0 16px 24px 2px rgba(33,37,41,.02), 
+		0 6px 30px 5px rgba(33,37,41,.04), 
+		0 8px 10px -5px rgba(33,37,41,.1);
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	margin: auto;
+	flex-wrap: wrap;
+}
+.containerCartImg{
+    height: 200px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	filter: grayscale(50%);
+}
 
 /* *************************  Registration  ******************************** */
 
@@ -140,7 +165,7 @@ h1{
 
 /* *****************************************************galery-full******************************************* */
 
-.gallery-full {
+.galleryFull {
 	width: 100%;
 	height: 100%;
 	background-size: contain;
@@ -152,7 +177,7 @@ h1{
 	display: none;
 	background-color: rgba(255,255,255,0.9);
 }
-.gallery-close {
+.galleryClose {
 	width: 50px;
 	height: 50px;
 	background-size: contain;
