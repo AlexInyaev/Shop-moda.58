@@ -13,6 +13,26 @@
 </head>
 <body>
         <div class="containerCart"></div>
+        <div class="form">
+                <form action="" method="post" name="test" id="form">
+                        <label for="name">Имя</label>
+                        <input type="text" name="name" placeholder="имя" id="name" ><br><br>
+                            <label for="Email">Email</label>
+                        <input type="email" name="email" placeholder="Email" id="email"><br><br>
+                        <label for="password">Пароль</label>
+                        <input type="password" name="password" placeholder="Пароль" id="password"><br><br>
+                        <label for="Repassword">Проверка пароля</label>
+                        <input type="password" name="Repassword" placeholder="Введите пароль" id="Repassword"><br><br>
+                        <span>Пол</span><br>
+                        <label for="man" >Мужской</label>
+                        <input type="radio" name="state"  id="man" value="Мужской"><br>
+                        <label for="wemen">Женский</label>
+                        <input type="radio" name="state"  id="wemen" value="Женский"><br>
+                        <br>
+                        <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово"> 
+                    </form>
+            <div class="galleryClose" onclick="galClose()"></div>
+        </div>
     <div class="header">
         <div class="wrapper">
             <img src="img/lable.png" alt="лэйбл">
@@ -53,5 +73,6 @@
     <script src="js/products.js"></script>
     <script src="js/gallery-full.js"></script>
     <script src="js/serviceCart.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>
