@@ -13,7 +13,7 @@
 </head>
 <body>
         <div class="containerCart"></div>
-        <div class="form">
+        <div class="form" onclick="formClose()">
                 <form action="" method="post" name="test" id="form">
                         <label for="name">Имя</label>
                         <input type="text" name="name" placeholder="имя" id="name" ><br><br>
@@ -31,7 +31,7 @@
                         <br>
                         <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово"> 
                     </form>
-            <div class="galleryClose" onclick="galClose()"></div>
+            <div class="formClose" onclick="formClose()"></div>
         </div>
     <div class="header">
         <div class="wrapper">
@@ -74,5 +74,6 @@
     <script src="js/gallery-full.js"></script>
     <script src="js/serviceCart.js"></script>
     <script src="js/form.js"></script>
+    
 </body>
 </html>

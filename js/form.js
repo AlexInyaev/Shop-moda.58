@@ -5,7 +5,7 @@ function valid(form){
 	var email = form.email.value;
 	var state = form.state.value;
 	var fail = false;
-	var abr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i; // Регулярное выражение
+	// var abr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i; // Регулярное выражение
 	console.log(name)
 	if(name==""||name==" ")
 			fail='Вы не ввели имя';
@@ -25,3 +25,16 @@ function valid(form){
 			window.location = "http://google.com"
 		}
 }
+
+ var form = document.querySelector('.form');
+
+
+ function formclick (){
+	form.style.display="block";
+//  form.style.backgroundImage = id.style.backgroundImage;
+
+ }
+function formClose() {
+	form.style.display="none";
+}
+
