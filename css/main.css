@@ -8,7 +8,7 @@ body{
     padding: 0;
 }
 .header{
-    height: 315px;
+    height: 320px;
     border-bottom: 10px solid #eee; /* нижняя линия*/
     margin-bottom:6px ;
     
@@ -127,6 +127,29 @@ h1{
     font-family: 'Lilita One', cursive;  
 }
 
+/* ********************** social********************************* */
+
+.social{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.sicialBtn{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 9px 0 0;
+}
+
+.sicialBtn li{
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+.sicialBtn li a img{
+  height: 30px;
+}
 /* ********************** gallery ********************************* */
 .gallery{
     display: flex;

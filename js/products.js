@@ -52,7 +52,6 @@ class Producrs{
             item.appendChild(size);
             item.appendChild(btn);
             wrapper.appendChild(item);                             //9 чтобы меньше обращаться к дом дереву записавыем эл. в переменную wrapper
-
         }
         this.container.appendChild(wrapper);                        //9.1 добавил вновь созданные эл-ты. в эл с классом '.gallery' как дочерние
     }

@@ -19,8 +19,10 @@
             item.appendChild(img);
             item.appendChild(name);
             item.appendChild(model);
-            wrapper.appendChild(item);  
+            wrapper.appendChild(item); 
             }
+           
+
             var close = serviseCreaetElement.getElement({tagName: 'div', className: 'cartClose'});
             close.addEventListener('click', function (){
                 serviceCart.containerCart.innerHTML = '';
